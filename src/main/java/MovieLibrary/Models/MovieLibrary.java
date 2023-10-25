@@ -1,4 +1,6 @@
-package MovieLibrary;
+package MovieLibrary.Models;
+
+import MovieLibrary.Models.Movie;
 
 import java.util.ArrayList;
 import java.util.List;

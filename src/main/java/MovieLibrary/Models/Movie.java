@@ -1,5 +1,7 @@
-package MovieLibrary;
+package MovieLibrary.Models;
 
+import MovieLibrary.Models.Actor;
+import MovieLibrary.Models.Director;
 import com.fasterxml.jackson.annotation.JsonAlias;
 
 import java.util.List;
