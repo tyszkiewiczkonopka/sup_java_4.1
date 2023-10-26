@@ -10,6 +10,7 @@ public class Actor {
 
     public Actor() {
     }
+
     public Actor(String actorName, String actorLastName) {
         this.actorName = actorName;
         this.actorLastName = actorLastName;

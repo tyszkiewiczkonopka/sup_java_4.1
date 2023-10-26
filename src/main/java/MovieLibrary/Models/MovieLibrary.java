@@ -1,7 +1,5 @@
 package MovieLibrary.Models;
 
-import MovieLibrary.Models.Movie;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,9 +8,11 @@ public class MovieLibrary {
 
     public MovieLibrary() {
     }
+
     public List<Movie> getMovies() {
         return movies;
     }
+
     public void setMovies(List<Movie> movies) {
         this.movies = movies;
     }

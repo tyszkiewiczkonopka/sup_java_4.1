@@ -1,7 +1,5 @@
 package MovieLibrary.Models;
 
-import MovieLibrary.Models.Actor;
-import MovieLibrary.Models.Director;
 import com.fasterxml.jackson.annotation.JsonAlias;
 
 import java.util.List;
@@ -13,8 +11,10 @@ public class Movie {
     private int releaseYear;
     private String genre;
     private List<Actor> actors;
+
     public Movie() {
     }
+
     public Movie(Director director, String title, int releaseYear, String genre, List<Actor> actors) {
         this.director = director;
         this.title = title;
@@ -22,12 +22,15 @@ public class Movie {
         this.genre = genre;
         this.actors = actors;
     }
+
     public Director getDirector() {
         return director;
     }
+
     public void setDirector(Director director) {
         this.director = director;
     }
+
     public String getTitle() {
         return title;
     }
@@ -51,6 +54,7 @@ public class Movie {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
     public List<Actor> getActors() {
         return actors;
     }
@@ -58,6 +62,7 @@ public class Movie {
     public void setActors(List<Actor> actors) {
         this.actors = actors;
     }
+
     @Override
     public String toString() {
         return title.toUpperCase() + "\n" +
