@@ -1,7 +1,7 @@
-package movieLibrary;
+package MovieLibrary;
 
-import movieLibrary.models.Movie;
-import movieLibrary.models.MovieLibrary;
+import MovieLibrary.models.Movie;
+import MovieLibrary.models.MovieLibrary;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
