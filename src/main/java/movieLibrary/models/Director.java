@@ -1,4 +1,4 @@
-package MovieLibrary.Models;
+package movieLibrary.models;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 
