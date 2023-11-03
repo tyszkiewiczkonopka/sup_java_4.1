@@ -1,17 +1,14 @@
 package MovieLibrary.models;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
+import lombok.Getter;
+import lombok.Setter;
 
-public class Director {
-    @JsonAlias({"firstName"})
-    private String directorName;
-    @JsonAlias({"lastName"})
-    private String directorLastName;
+@Getter
+@Setter
+public class Director extends Person {
 
-
-    public Director(String directorName, String directorLastName) {
-        this.directorName = directorName;
-        this.directorLastName = directorLastName;
+    public Director(String firstName, String lastName) {
+        super(firstName, lastName);
     }
 
     public Director() {
@@ -19,22 +16,6 @@ public class Director {
 
     @Override
     public String toString() {
-        return "Director: " + directorName + " " + directorLastName;
-    }
-
-    public String getDirectorName() {
-        return directorName;
-    }
-
-    public void setDirectorName(String directorName) {
-        this.directorName = directorName;
-    }
-
-    public String getDirectorLastName() {
-        return directorLastName;
-    }
-
-    public void setDirectorLastName(String directorLastName) {
-        this.directorLastName = directorLastName;
+        return "Director: " + super.getFirstName() + " " + super.getLastName();
     }
 }

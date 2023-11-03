@@ -1,39 +1,21 @@
 package MovieLibrary.models;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
+import lombok.Getter;
+import lombok.Setter;
 
-public class Actor {
-    @JsonAlias({"firstName"})
-    private String actorName;
-    @JsonAlias({"lastName"})
-    private String actorLastName;
+@Getter
+@Setter
+public class Actor extends Person {
 
     public Actor() {
     }
 
-    public Actor(String actorName, String actorLastName) {
-        this.actorName = actorName;
-        this.actorLastName = actorLastName;
-    }
-
-    public String getActorName() {
-        return actorName;
-    }
-
-    public void setActorName(String actorName) {
-        this.actorName = actorName;
-    }
-
-    public String getActorLastName() {
-        return actorLastName;
-    }
-
-    public void setActorLastName(String actorLastName) {
-        this.actorLastName = actorLastName;
+    public Actor(String firstName, String lastName) {
+        super(firstName, lastName);
     }
 
     @Override
     public String toString() {
-        return actorName + " " + actorLastName;
+        return super.getFirstName() + " " + super.getLastName();
     }
 }

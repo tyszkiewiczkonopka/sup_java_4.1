@@ -1,14 +1,16 @@
 package MovieLibrary.models;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Getter
+@Setter
 public class Movie {
     private Director director;
     private String title;
-    @JsonAlias({"date"})
-    private int releaseYear;
+    private int date;
     private String genre;
     private List<Actor> actors;
 
@@ -18,48 +20,8 @@ public class Movie {
     public Movie(Director director, String title, int releaseYear, String genre, List<Actor> actors) {
         this.director = director;
         this.title = title;
-        this.releaseYear = releaseYear;
+        this.date = releaseYear;
         this.genre = genre;
-        this.actors = actors;
-    }
-
-    public Director getDirector() {
-        return director;
-    }
-
-    public void setDirector(Director director) {
-        this.director = director;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getReleaseYear() {
-        return releaseYear;
-    }
-
-    public void setReleaseYear(int releaseYear) {
-        this.releaseYear = releaseYear;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public List<Actor> getActors() {
-        return actors;
-    }
-
-    public void setActors(List<Actor> actors) {
         this.actors = actors;
     }
 
@@ -67,7 +29,7 @@ public class Movie {
     public String toString() {
         return title.toUpperCase() + "\n" +
                 director + "\n" +
-                "Release year: " + releaseYear + "\n" +
+                "Release year: " + date + "\n" +
                 "Genre: " + genre + "\n" +
                 "Main actors: " + actors + "\n\n";
     }
